@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  bot:
+    build: 
+      context: ./
+      args:
+        - REPO_VERSION=v2.31.0
+    env_file:
+      - .env
+    restart: unless-stopped
